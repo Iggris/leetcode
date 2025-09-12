@@ -21,7 +21,7 @@ class Solution(object):
                 if k==0:
                     ans+=v
                     k=1
-                elif v-1>0 and k==1:
+                else:
                     ans+=v-1
 
         return ans
