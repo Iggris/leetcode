@@ -21,3 +21,14 @@ class Solution(object):
                 n=0
         ans.sort()
         return "".join(ans)
+/////////////////////////////////////////////////////
+class Solution(object):
+    def getSmallestString(self, n, k):
+        rem = k - n
+        s = ['a'] * n
+        for i in range(n - 1, -1, -1):
+            if rem == 0: break
+            add = min(25, rem)
+            s[i] = chr(97 + add)
+            rem -= add
+        return ''.join(s)
